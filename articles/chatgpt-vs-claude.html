@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT vs Claude｜非エンジニアが両方使って分かった決定的な違い | AI実践ラボ</title>
+  <meta name="description" content="ChatGPTとClaudeを非エンジニアが徹底比較。文章力、コード生成、料金、使いやすさを実体験ベースで解説。">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YWW8GMPB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V4YWW8GMPB');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ChatGPT vs Claude｜非エンジニアが両方使って分かった決定的な違い",
+    "description": "ChatGPTとClaudeを非エンジニアが徹底比較。文章力、コード生成、料金、使いやすさを実体験ベースで解説。",
+    "author": {
+      "@type": "Person",
+      "name": "Tokimo"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI実践ラボ",
+      "url": "https://teal-bienenstitch-e337b8.netlify.app/"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "url": "https://teal-bienenstitch-e337b8.netlify.app/articles/chatgpt-vs-claude.html"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">🤖 AI実践ラボ</a>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="../index.html#tools">ツール紹介</a></li>
+          <li><a href="../index.html#howto">使い方</a></li>
+          <li><a href="../index.html#reviews">レビュー</a></li>
+          <li><a href="../index.html#sidejob">副業活用</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <article class="article-container">
+
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../index.html#tools">ツール比較</a></li>
+          <li>ChatGPT vs Claude</li>
+        </ol>
+      </nav>
+
+      <header class="article-header">
+        <span class="article-category">ツール比較</span>
+        <time class="article-date" datetime="2026-04-10">2026年4月10日</time>
+        <h1 class="article-title">ChatGPT vs Claude｜非エンジニアが両方使って分かった決定的な違い</h1>
+        <p class="article-lead">「結局どっちを使えばいいの？」——2ヶ月間、毎日両方を使い続けた俺が、非エンジニア目線で正直に答えます。料金も、文章力も、使い勝手も、全部ぶっちゃけます。</p>
+      </header>
+
+      <div class="article-info-box">
+        <h2 class="info-box-title">この記事の比較概要</h2>
+        <ul class="info-box-list">
+          <li><strong>比較対象：</strong>ChatGPT Plus vs Claude Pro</li>
+          <li><strong>評価基準：</strong>文章力・コード生成・料金・UI</li>
+          <li><strong>検証期間：</strong>2ヶ月</li>
+          <li><strong>結論：</strong>用途で使い分けが最強</li>
+        </ul>
+      </div>
+
+      <nav class="toc" aria-label="目次">
+        <h2 class="toc-title">目次</h2>
+        <ol class="toc-list">
+          <li><a href="#premise">比較の前提｜俺のスペックと使い方</a></li>
+          <li><a href="#writing">文章力比較｜どっちが「読める文章」を書くか</a></li>
+          <li><a href="#code">コード生成比較｜非エンジニアにはどっちが優しいか</a></li>
+          <li><a href="#price">料金比較｜コスパを徹底検証</a></li>
+          <li><a href="#ui">UIと使いやすさ｜日常使いしやすいのはどっち</a></li>
+          <li><a href="#usecase">用途別おすすめ｜シーン別に使い分ける</a></li>
+          <li><a href="#summary">まとめ｜結局どっちを選ぶべきか</a></li>
+        </ol>
+      </nav>
+
+      <section id="premise" class="article-section">
+        <h2>比較の前提｜俺のスペックと使い方</h2>
+        <p>まず俺のスペックを正直に言っておく。職業はWebライター兼副業ブロガー。プログラミングはほぼ未経験で、HTMLとCSSが少しわかる程度。コードは書けないけど、「こういうツールを作りたい」という要望をAIにぶつけて実装してもらうスタイルで副業をやっている。</p>
+        <p>この記事では、そんな「非エンジニア・副業勢」の視点でChatGPT PlusとClaude Proを比べていく。両方とも月額約$20（約3,000円）の有料プランを2ヶ月間使い続けた。用途は主にブログ記事の執筆補助、SNS投稿の文章生成、簡単なツール（HTMLファイル）の作成、アイデア出しの4つだ。</p>
+        <div class="callout callout-info">
+          <p><strong>💡 前提として：</strong>どちらのAIも「最強」ではない。用途によって強さが全然違う。「どっちが勝ち」ではなく「どう使い分けるか」という視点で読んでほしい。</p>
+        </div>
+        <p>正直言うと、2ヶ月前まで俺は「ChatGPTだけでいい」と思っていた。でも友人に勧められてClaudeを使い始めたら、思っていた以上に違いがあってびっくりした。特に文章の「質感」が全然違う。これについては次のセクションで詳しく話す。</p>
+      </section>
+
+      <section id="writing" class="article-section">
+        <h2>文章力比較｜どっちが「読める文章」を書くか</h2>
+        <p>非エンジニアの俺にとって、AIを使う目的の8割は「文章を書くこと」だ。だからここが一番大事なポイントになる。</p>
+        <h3>ChatGPTの文章：構造は完璧、でも「感情」が薄い</h3>
+        <p>ChatGPTが書く文章は、構成がしっかりしている。見出し、箇条書き、段落の流れ——これが非常にきれいに整う。ブログ記事のドラフトを出してもらうと、そのまま公開できそうなレベルの「型」が仕上がる。</p>
+        <p>ただ、読んでいると何かが足りない気がする。感情の起伏というか、読者を引き込む「熱量」みたいなものが薄い。「正確だけど面白くない」という感じ。情報を整理する用途には最高だが、人の心を動かす文章にはもう一手間必要になることが多い。</p>
+        <h3>Claudeの文章：自然で読みやすく、温度感がある</h3>
+        <p>一方でClaudeの文章は、読んでいて「人間が書いたっぽい」感じがある。特に日本語の自然さが際立つ。ChatGPTが「翻訳された日本語」っぽいのに対し、Claudeは「最初から日本語で考えた文章」という印象を受ける。</p>
+        <p>実際に同じプロンプトを両方に投げてみると、Claudeのほうが読後感が良いことが多かった。特にブログ記事や読者向けのコンテンツでは、Claudeの文章のほうがユーザーに刺さりやすいと感じた。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>評価項目</th>
+                <th>ChatGPT</th>
+                <th>Claude</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>文章構成の完成度</td>
+                <td>★★★★★</td>
+                <td>★★★★☆</td>
+              </tr>
+              <tr>
+                <td>日本語の自然さ</td>
+                <td>★★★☆☆</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr>
+                <td>感情・熱量の表現</td>
+                <td>★★★☆☆</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr>
+                <td>長文の一貫性</td>
+                <td>★★★★☆</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr>
+                <td>要約・整理力</td>
+                <td>★★★★★</td>
+                <td>★★★★☆</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-tip">
+          <p><strong>✅ 文章力の結論：</strong>ブログや読者向けコンテンツはClaude、情報整理・構成作りはChatGPTが強い。</p>
+        </div>
+      </section>
+
+      <section id="code" class="article-section">
+        <h2>コード生成比較｜非エンジニアにはどっちが優しいか</h2>
+        <p>これは意外な結果だった。俺みたいな非エンジニアがコードを生成してもらう場合、「コードの正確さ」よりも「説明のわかりやすさ」と「エラーへの対応力」のほうが重要になる。</p>
+        <h3>ChatGPTのコード生成：速くて実用的</h3>
+        <p>ChatGPTはコード生成が速い。「こういうHTMLページを作りたい」と伝えると、すぐにそれっぽいコードを出してくれる。ただ、コードの説明がやや技術的で、非エンジニアには少し難しく感じることがある。「なぜこうなるのか」を聞くと丁寧に答えてくれるが、最初から平易な説明はしてくれない印象だ。</p>
+        <h3>Claudeのコード生成：説明が丁寧で安心感がある</h3>
+        <p>Claudeはコードを出すとき、何をどう変えたのかを自然な言葉で説明してくれる。「この部分はこういう理由でこうしました」という説明が自然についてくるので、コードが読めなくてもなんとなく理解できる。エラーが出て「こんなエラーが出た」と伝えると、落ち着いて原因を説明してくれる感じで、非エンジニアには心理的な安心感がある。</p>
+        <p>ただし、複雑な処理を任せると、たまに不必要に長いコードを書くことがある。シンプルさではChatGPTのほうが上かもしれない。</p>
+        <div class="callout callout-warning">
+          <p><strong>⚠️ 注意：</strong>どちらのAIもコードにバグが出ることはある。生成されたコードは必ず動作確認すること。特に本番環境にそのままデプロイするのはリスクがある。</p>
+        </div>
+      </section>
+
+      <section id="price" class="article-section">
+        <h2>料金比較｜コスパを徹底検証</h2>
+        <p>両方とも有料プランは月約$20（日本円で約3,000円前後）。正直、価格は同等だ。ただし、無料プランの使い勝手には差がある。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>プラン</th>
+                <th>ChatGPT</th>
+                <th>Claude</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>無料プラン</td>
+                <td>GPT-4oが制限付きで使える</td>
+                <td>Claude 3.5 Sonnetが制限付きで使える</td>
+              </tr>
+              <tr>
+                <td>有料プラン料金</td>
+                <td>$20/月（Plus）</td>
+                <td>$20/月（Pro）</td>
+              </tr>
+              <tr>
+                <td>有料プランの主な特典</td>
+                <td>GPT-4o無制限、画像生成、GPTs</td>
+                <td>Claude 3系無制限、Projects、長文対応</td>
+              </tr>
+              <tr>
+                <td>APIの利用</td>
+                <td>別途従量課金</td>
+                <td>別途従量課金</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>俺が感じたコスパの違いは、「無料プランの制限がどのくらい厳しいか」だ。ChatGPTの無料プランはメッセージ数の制限がわかりやすく出るのに対し、Claudeの無料プランはある程度使うと制限がかかる感じ。ヘビーユーザーなら両方有料にするのが現実的だろう。</p>
+        <div class="callout callout-info">
+          <p><strong>💡 コスパ結論：</strong>料金は互角。ただし「どちらか1つだけ選ぶ」なら自分のメイン用途で判断すること。文章重視ならClaude、汎用性重視ならChatGPTがおすすめ。</p>
+        </div>
+      </section>
+
+      <section id="ui" class="article-section">
+        <h2>UIと使いやすさ｜日常使いしやすいのはどっち</h2>
+        <p>これは完全に好みの問題もあるが、俺なりの感想を正直に言う。</p>
+        <h3>ChatGPTのUI：機能が豊富で多機能</h3>
+        <p>ChatGPTのインターフェースは機能が多い。カスタムGPT（GPTs）、画像生成（DALL-E）、音声入力、ファイルアップロード——これだけの機能が1つのアプリに詰まっている。パワーユーザーには天国だが、シンプルに「文章を書きたいだけ」という人には少し煩雑に感じることもある。</p>
+        <h3>ClaudeのUI：シンプルで集中できる</h3>
+        <p>Claudeのインターフェースはすっきりしている。余計な機能が少なく、「書く・考える」作業に集中できる。Projectsという機能で会話の文脈を保存できるのも便利で、「この案件専用のClaudeチャット」みたいな使い方ができる。</p>
+        <p>モバイルアプリの使いやすさは個人的にClaudeのほうが上だと感じた。外出先でスマホからさっとアイデアを整理したいときはClaudeを開くことが多くなった。</p>
+      </section>
+
+      <section id="usecase" class="article-section">
+        <h2>用途別おすすめ｜シーン別に使い分ける</h2>
+        <p>2ヶ月使い続けた結果、俺の中で以下のような使い分けが固まってきた。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>用途</th>
+                <th>おすすめ</th>
+                <th>理由</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ブログ記事執筆</td>
+                <td>Claude</td>
+                <td>日本語が自然で読みやすい</td>
+              </tr>
+              <tr>
+                <td>SNS投稿文の作成</td>
+                <td>Claude</td>
+                <td>感情的な温度感がある</td>
+              </tr>
+              <tr>
+                <td>情報収集・まとめ</td>
+                <td>ChatGPT</td>
+                <td>構造化が得意</td>
+              </tr>
+              <tr>
+                <td>簡単なコード生成</td>
+                <td>どちらでも可</td>
+                <td>目的で選ぶ</td>
+              </tr>
+              <tr>
+                <td>アイデアブレスト</td>
+                <td>ChatGPT</td>
+                <td>発散的な案出しが得意</td>
+              </tr>
+              <tr>
+                <td>長文ドキュメント作成</td>
+                <td>Claude</td>
+                <td>長文での一貫性が高い</td>
+              </tr>
+              <tr>
+                <td>画像生成が必要</td>
+                <td>ChatGPT</td>
+                <td>DALL-E統合がある</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-tip">
+          <p><strong>✅ 実践的な使い分け術：</strong>俺は「文章系の作業はClaude、調べ物・構成作りはChatGPT」という使い分けで落ち着いた。両方契約してもトータル月6,000円程度。副業で稼げばすぐ回収できる投資額だと思っている。</p>
+        </div>
+      </section>
+
+      <section id="summary" class="article-section">
+        <h2>まとめ｜結局どっちを選ぶべきか</h2>
+        <p>2ヶ月間使い込んだ結論を言う。「どちらか1つだけ選ぶなら」という前提で答えると：</p>
+        <ul>
+          <li><strong>文章を書くことがメインなら → Claude</strong>：日本語の自然さ、読みやすさ、感情的な温度感でClaudeが上回る</li>
+          <li><strong>汎用的にいろんなことをしたいなら → ChatGPT</strong>：機能の豊富さ、情報整理力、各種ツールとの連携でChatGPTが優位</li>
+          <li><strong>コスパ最優先で1つだけ使うなら → Claude</strong>：無料プランでも文章系の作業は十分こなせる</li>
+        </ul>
+        <p>ただ、正直なことを言うと、副業でAIを活用して稼ぎたいなら両方使うのが最適解だ。それぞれの強みを把握して、用途に応じて使い分けることで、作業スピードも品質も上がる。</p>
+        <p>「月6,000円は高い」と感じるかもしれないが、AIツールへの投資は副業の武器への投資だ。使いこなせれば、その何倍もの収益に繋がる。俺は実際にそれを体験してきた。ぜひ一度、両方を試してみてほしい。</p>
+        <div class="callout callout-info">
+          <p><strong>📌 関連記事：</strong><a href="ai-tools-ranking.html">非エンジニアにおすすめのAIツール5選</a>も参考にどうぞ。副業で実際に使って稼いだツールを厳選して紹介しています。</p>
+        </div>
+        <p class="article-author">この記事を書いた人：<strong>Tokimo</strong>（Webライター／副業ブロガー。非エンジニアながらAIツールを駆使して副業収入を構築中）</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">🤖 AI実践ラボ</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../index.html#tools">ツール紹介</a></li>
+          <li><a href="../index.html#howto">使い方</a></li>
+          <li><a href="../index.html#reviews">レビュー</a></li>
+          <li><a href="../index.html#sidejob">副業活用</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2026 AI実践ラボ. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

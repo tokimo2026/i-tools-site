@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursor徹底レビュー｜非エンジニアがClaude Codeと使い分けてみた結果 | AI実践ラボ</title>
+  <meta name="description" content="AI搭載コードエディタCursorを非エンジニアが使ってみた正直レビュー。Claude Codeとの違いも解説。">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YWW8GMPB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V4YWW8GMPB');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cursor徹底レビュー｜非エンジニアがClaude Codeと使い分けてみた結果",
+    "description": "AI搭載コードエディタCursorを非エンジニアが使ってみた正直レビュー。Claude Codeとの違いも解説。",
+    "author": {
+      "@type": "Person",
+      "name": "Tokimo"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI実践ラボ",
+      "url": "https://teal-bienenstitch-e337b8.netlify.app/"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "url": "https://teal-bienenstitch-e337b8.netlify.app/articles/cursor-review.html"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">🤖 AI実践ラボ</a>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="../index.html#tools">ツール紹介</a></li>
+          <li><a href="../index.html#howto">使い方</a></li>
+          <li><a href="../index.html#reviews">レビュー</a></li>
+          <li><a href="../index.html#sidejob">副業活用</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <article class="article-container">
+
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../index.html#reviews">レビュー</a></li>
+          <li>Cursor徹底レビュー</li>
+        </ol>
+      </nav>
+
+      <header class="article-header">
+        <span class="article-category">レビュー</span>
+        <time class="article-date" datetime="2026-04-10">2026年4月10日</time>
+        <h1 class="article-title">Cursor徹底レビュー｜非エンジニアがClaude Codeと使い分けてみた結果</h1>
+        <p class="article-lead">「Cursorって結局どうなの？」——Claude Codeをメインで使っている俺が、Cursorを1ヶ月間本格的に使い込んだ。その結果、「完全に使い分けが決まった」。非エンジニアの目線で、正直な感想を全部書く。</p>
+      </header>
+
+      <div class="article-info-box">
+        <h2 class="info-box-title">Cursor レビュー概要</h2>
+        <ul class="info-box-list">
+          <li><strong>総合評価：</strong>★★★★☆ 4.0</li>
+          <li><strong>料金：</strong>無料プランあり / Pro月$20</li>
+          <li><strong>難易度：</strong>中級（VSCodeの基礎知識推奨）</li>
+          <li><strong>Claude Codeとの違い：</strong>GUIベース vs CLIベース</li>
+        </ul>
+      </div>
+
+      <nav class="toc" aria-label="目次">
+        <h2 class="toc-title">目次</h2>
+        <ol class="toc-list">
+          <li><a href="#whatis">Cursorとは｜VSCodeにAIを載せたコードエディタ</a></li>
+          <li><a href="#diff">Claude Codeとの違い｜GUIとCLIの根本的な差</a></li>
+          <li><a href="#made">実際に作ったもの｜俺がCursorで完成させた成果物</a></li>
+          <li><a href="#merits">メリット4つ｜Cursorが得意なこと</a></li>
+          <li><a href="#demerits">デメリット3つ｜Cursorが苦手なこと</a></li>
+          <li><a href="#pricing">料金プラン｜無料で十分？有料は必要？</a></li>
+          <li><a href="#guide">使い分けガイド｜Cursorを使う場面 vs Claude Codeを使う場面</a></li>
+          <li><a href="#summary">まとめ｜非エンジニアにCursorはおすすめか</a></li>
+        </ol>
+      </nav>
+
+      <section id="whatis" class="article-section">
+        <h2>Cursorとは｜VSCodeにAIを載せたコードエディタ</h2>
+        <p>Cursorを一言で説明すると「AIが内蔵されたコードエディタ」だ。もう少し詳しく言うと、VS Code（Visual Studio Code）というエンジニアに大人気のエディタをベースに、AIのチャット機能・コード補完・自動修正を組み込んだツールだ。</p>
+        <p>VS Codeを使ったことがある人なら、CursorはほぼそのままVS Codeの見た目・操作感で使える。VS Codeの拡張機能もそのまま使えるので、乗り換えコストが低い。</p>
+        <p>俺がCursorを知ったのは、Twitterで「CursorでWebアプリを1時間で作った」というツイートを見かけたのがきっかけだ。「1時間でWebアプリ？本当に？」と半信半疑で試してみた。</p>
+        <h3>Cursorの主な機能</h3>
+        <ul>
+          <li><strong>Composer（作曲家）モード</strong>：複数ファイルをまたいでAIに指示を出せる。「新しいページを追加して、ナビゲーションにリンクも追加して」みたいな複合的な指示が1回でできる</li>
+          <li><strong>Chat機能</strong>：エディタの横でAIとチャットしながらコードを書ける。「この部分の意味を教えて」「このエラーの原因は何？」など、コードを見ながら相談できる</li>
+          <li><strong>Tab補完</strong>：コードを書いていると、次に書くべきコードをAIが予測して提案してくれる。Tabキーを押すだけで採用できる</li>
+          <li><strong>インラインEdit</strong>：コードを選択して「Ctrl+K」で、選択範囲だけをAIに修正させられる</li>
+        </ul>
+        <div class="callout callout-info">
+          <p><strong>💡 Cursorは何で動いているのか：</strong>CursorのAIモデルは複数選べる。Claude 3.5 Sonnet、GPT-4o、Geminiなど。用途によってモデルを切り替えられるのも地味に便利だ。</p>
+        </div>
+      </section>
+
+      <section id="diff" class="article-section">
+        <h2>Claude Codeとの違い｜GUIとCLIの根本的な差</h2>
+        <p>俺がCursorを試してまず思ったのは、「Claude Codeとは根本的に体験が違う」ということだ。どちらもAIを使ってコードを書くツールだが、アプローチが全然違う。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>比較項目</th>
+                <th>Cursor</th>
+                <th>Claude Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>インターフェース</td>
+                <td>GUI（グラフィカル）</td>
+                <td>CLI（コマンドライン）</td>
+              </tr>
+              <tr>
+                <td>操作感</td>
+                <td>VSCodeライク。視覚的</td>
+                <td>ターミナルでの対話形式</td>
+              </tr>
+              <tr>
+                <td>ファイル操作</td>
+                <td>エディタ内で直接確認</td>
+                <td>AIが自動でファイル編集</td>
+              </tr>
+              <tr>
+                <td>向いている用途</td>
+                <td>既存コードの修正・拡張</td>
+                <td>ゼロから作る・大規模変更</td>
+              </tr>
+              <tr>
+                <td>学習コスト</td>
+                <td>中（VSCode知識があれば低）</td>
+                <td>低〜中（ターミナル操作が必要）</td>
+              </tr>
+              <tr>
+                <td>AIとの会話</td>
+                <td>Chatパネルで並行表示</td>
+                <td>ターミナル内での対話</td>
+              </tr>
+              <tr>
+                <td>コードの可視性</td>
+                <td>常に画面で確認できる</td>
+                <td>変更後にファイルを開いて確認</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>簡単に言うと、Cursorは「コードを見ながらAIと作業する」ツールで、Claude Codeは「コードをAIに任せて作業してもらう」ツールだ。どちらが良いというわけではなく、作業スタイルや案件の種類によって向き不向きがある。</p>
+        <h3>非エンジニア視点での正直な感想</h3>
+        <p>俺の感想を正直に言うと、「最初はCursorのほうが取っつきやすかった」だ。Claude Codeはターミナルに慣れるまでが少し大変だが、Cursorはエディタを開いて使うだけなので、心理的なハードルが低い。ただ、慣れてきたらClaude Codeのほうがスピーディーに動くことも多いと感じている。</p>
+      </section>
+
+      <section id="made" class="article-section">
+        <h2>実際に作ったもの｜俺がCursorで完成させた成果物</h2>
+        <p>レビューを書くにあたって、Cursorで実際に作ったものを正直に紹介する。「作れた！」という体験談だけでなく、「ここで詰まった」という話も含めて書く。</p>
+        <h3>1. ToDoアプリ（JavaScript）</h3>
+        <p>最初に試したのは定番のToDoアプリだ。「Cursorで作るなら何から始めるか」と調べたら大体ToDoアプリが出てくるので、素直に従った。CursorのComposerに「シンプルなToDoアプリをHTMLとJavaScriptで作って。タスクの追加・削除・完了チェックができるもの」と入力したら、3つのファイル（index.html、style.css、app.js）を一気に作ってくれた。コードはほぼそのまま動いた。所要時間は約20分。</p>
+        <h3>2. クライアントのWordPressブログのカスタマイズ</h3>
+        <p>副業で受けた案件で、WordPressの子テーマのCSSを修正する仕事があった。クライアントから「このボタンの色を変えたい」「スマホで見たときのメニューが崩れている」という要望を受けて、Cursorでfunctions.phpとstyle.cssを開き、チャット機能で「このCSSのここを修正して」と伝えた。エンジニアに頼んだら数時間かかりそうな修正が、30分程度で完成した。</p>
+        <h3>3. シンプルな予約フォーム（HTML/CSS/JS）</h3>
+        <p>個人サロンを経営している友人に頼まれて作った予約フォームだ。「名前、電話番号、希望日時を入力して送信できるフォーム。バリデーション付き」という要件をCursorに伝えたら、FormspreeというサービスのコードまでAIが提案してくれて、バックエンドなしで動くフォームが完成した。これは自分でも驚いた。</p>
+        <div class="callout callout-tip">
+          <p><strong>✅ Cursor初心者へのアドバイス：</strong>最初は「既存のコードを修正する」用途から始めるのがおすすめ。ゼロから作るより、動いているコードに機能を追加するほうがAIとのやり取りがスムーズで、自分も何が起きているかを理解しやすい。</p>
+        </div>
+      </section>
+
+      <section id="merits" class="article-section">
+        <h2>メリット4つ｜Cursorが得意なこと</h2>
+        <h3>メリット1：コードを見ながらAIに相談できる</h3>
+        <p>これがCursorの最大の強みだと思う。エディタの右側にChatパネルが開いて、左側にコードが表示された状態でAIに質問できる。「このコードの意味がわからない」「ここにバグがあると思うんだけど」と聞くと、画面に表示されているコードを参照しながら答えてくれる。Claude Codeのように「コードをコピーして貼り付けて質問する」というステップが不要なので、作業が途切れにくい。</p>
+        <h3>メリット2：既存のVSCode設定がそのまま使える</h3>
+        <p>俺はVSCodeをすでに使っていたので、Cursorに乗り換えたときの設定ゼロ乗り換えが助かった。テーマ、フォント、拡張機能——全部そのまま持ち込めた。VSCodeを使っている人は乗り換えコストがほぼゼロだ。</p>
+        <h3>メリット3：複数ファイルをまたいだ変更が得意</h3>
+        <p>Composerモードを使うと、「ヘッダーのナビゲーションに新しいページへのリンクを追加して。そのページも作って」という指示に対して、header.htmlとnewpage.htmlの両方を同時に作成・修正してくれる。これはClaude Codeでもできるが、Cursorは変更内容が画面上で差分（変更前と変更後の比較）として表示されるので、何が変わったかを視覚的に確認しやすい。</p>
+        <h3>メリット4：Tabキー補完が快適</h3>
+        <p>コードを書いていると、次に書きそうなコードをAIが予測してグレーで表示してくれる。それが合っていればTabキーを押すだけで採用できる。最初は「補完を蹴ることが多いな」と感じたが、1週間も使うと補完の精度に慣れてきて、Tabキーを押す頻度が増えた。タイピング量が体感で3〜4割減った気がする。</p>
+      </section>
+
+      <section id="demerits" class="article-section">
+        <h2>デメリット3つ｜Cursorが苦手なこと</h2>
+        <h3>デメリット1：無料プランの制限が厳しい</h3>
+        <p>Cursorの無料プランは月に限られた回数しかAI機能（特にComposer）を使えない。副業で毎日使うと、月の半ばで制限に引っかかることがある。「あと少しで案件が終わるのに」というタイミングで制限がくるのはストレスだ。副業目的でヘビーに使うなら、有料プラン（月$20）を前提にしたほうがいい。</p>
+        <h3>デメリット2：VSCodeの知識がないと最初のセットアップで詰まる</h3>
+        <p>Cursorは「VSCodeライク」だが、完全に初心者向けかというとそうではない。ターミナルを開く方法、拡張機能のインストール、プロジェクトフォルダの開き方——このあたりの基礎知識がないと、最初のセットアップで詰まる可能性がある。Claude Codeのほうがある意味シンプルで、「インストールしてAPIキーを設定してコマンド打つだけ」という割り切った始め方ができる。</p>
+        <h3>デメリット3：大きなプロジェクトになると文脈管理が難しい</h3>
+        <p>ファイルが10個、20個と増えてくると、CursorのAIが全体像を把握しきれなくなることがある。「このファイルのあの変数が別のファイルで参照されているのに、それを無視した変更をする」みたいなことが起きる。大規模なプロジェクトでは、AIに都度「このプロジェクトの全体構成はこうだ」と教える必要があり、やや面倒だ。</p>
+        <div class="callout callout-warning">
+          <p><strong>⚠️ 注意：</strong>CursorのAIが出力したコードも、必ず動作確認すること。特に「こういう感じにして」という曖昧な指示で生成したコードは、意図しない動作をすることがある。小さい変更から試して、少しずつ複雑な指示に慣れていくのがベストだ。</p>
+        </div>
+      </section>
+
+      <section id="pricing" class="article-section">
+        <h2>料金プラン｜無料で十分？有料は必要？</h2>
+        <p>Cursorの料金プランは以下の通りだ。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>プラン</th>
+                <th>月額</th>
+                <th>主な内容</th>
+                <th>向いている人</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hobby（無料）</td>
+                <td>$0</td>
+                <td>Composer 2週間トライアル後は限定回数、Tab補完一部</td>
+                <td>試しに使ってみたい人</td>
+              </tr>
+              <tr>
+                <td>Pro</td>
+                <td>$20/月</td>
+                <td>Composer無制限、高速モデル、優先アクセス</td>
+                <td>毎日使う副業勢</td>
+              </tr>
+              <tr>
+                <td>Business</td>
+                <td>$40/月（1人あたり）</td>
+                <td>チーム機能、セキュリティ強化</td>
+                <td>チームで使う場合</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>正直なところ、副業で使うなら無料プランでは厳しい。2週間のトライアル期間が終わると、Composerの回数制限がかかり始める。「月に数回だけ試したい」なら無料でもいいが、毎日使うなら$20のProプランを前提にするべきだ。</p>
+        <p>ただし$20はClaude Code（API従量課金）やChatGPT Plusとほぼ同等のコストだ。「Cursor Pro + ChatGPT Plus」で月$40、「Cursor Pro + Claude Code」でも月$30〜40程度になる。副業収益でカバーできる範囲だが、最初は「Cursorだけ有料にして試す」という入り方でも良いと思う。</p>
+      </section>
+
+      <section id="guide" class="article-section">
+        <h2>使い分けガイド｜Cursorを使う場面 vs Claude Codeを使う場面</h2>
+        <p>1ヶ月Cursorを本格的に使った結果、俺の中で使い分けの基準が固まった。以下がそのまとめだ。</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>場面</th>
+                <th>おすすめ</th>
+                <th>理由</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>既存コードのバグ修正</td>
+                <td>Cursor</td>
+                <td>コードを見ながら修正できる</td>
+              </tr>
+              <tr>
+                <td>新しいページ・機能をゼロから作る</td>
+                <td>Claude Code</td>
+                <td>ファイル作成から全部任せられる</td>
+              </tr>
+              <tr>
+                <td>クライアントのコードを修正する案件</td>
+                <td>Cursor</td>
+                <td>既存ファイルを開いてそのまま作業できる</td>
+              </tr>
+              <tr>
+                <td>丸ごとサイトを1から作る</td>
+                <td>Claude Code</td>
+                <td>全体構成からAIに設計してもらいやすい</td>
+              </tr>
+              <tr>
+                <td>コードを学習したい</td>
+                <td>Cursor</td>
+                <td>コードを見ながら説明してもらえる</td>
+              </tr>
+              <tr>
+                <td>自動化・スクリプト作成</td>
+                <td>Claude Code</td>
+                <td>ファイル操作・実行まで一気にできる</td>
+              </tr>
+              <tr>
+                <td>GitHubリポジトリを使った開発</td>
+                <td>Cursor</td>
+                <td>Git統合がVSCodeと同等で使いやすい</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-tip">
+          <p><strong>✅ 俺の今の運用：</strong>Claude Codeで新しいプロジェクトの骨格を作り、細かい調整や修正はCursorでやるというハイブリッド運用に落ち着いた。作業フォルダをCursorで開いておいて、「ここを直してほしい」という局所的な修正はCursor、「全体をリファクタリングしたい」という大きな変更はClaude Codeという使い分けだ。</p>
+        </div>
+      </section>
+
+      <section id="summary" class="article-section">
+        <h2>まとめ｜非エンジニアにCursorはおすすめか</h2>
+        <p>正直な答えを言う。非エンジニアにCursorはおすすめだ。ただし「完全な初心者」にとっては最初のハードルが少しある。VSCodeを使ったことがない人は、まずClaude CodeかChatGPTから始めて、コードに慣れてからCursorに移行するのが現実的だ。</p>
+        <p>逆に「VSCodeを少し知っている」「コードは読めないけど、なんとなくわかる」というレベルの人には、Cursorは非常に使いやすいツールだ。コードを「画面で見ながら」AIと作業できる体験は、Claude Codeとは違う安心感がある。</p>
+        <h3>Cursorをおすすめしたい人</h3>
+        <ul>
+          <li>VSCodeを使ったことがあるor興味がある人</li>
+          <li>既存のWebサイトやアプリのコードを修正する副業をしたい人</li>
+          <li>コードを視覚的に確認しながら作業したい人</li>
+          <li>Claude CodeとCursorの両方を組み合わせて使いたい人</li>
+        </ul>
+        <h3>Cursorより先にClaude Codeを試すべき人</h3>
+        <ul>
+          <li>完全なゼロ初心者でターミナルも触ったことがない人</li>
+          <li>まずはHTMLとCSSの簡単な案件から始めたい人</li>
+          <li>ツールを1つに絞りたい人（Claude Codeのほうがオールインワン感がある）</li>
+        </ul>
+        <p>俺の総合評価は★★★★☆（4.0/5）だ。満点をつけなかったのは、無料プランの制限と、完全な初心者へのとっつきにくさのためだ。でもこれは慣れれば解決する問題で、使い続けるほど評価が上がるツールだと思っている。</p>
+        <p>「副業でコードを使いたいけど、どこから始めればいいかわからない」という人は、まず<a href="ai-tools-ranking.html">AIツール5選ランキング</a>を読んでみてほしい。Cursorの立ち位置も含めて、全体像がわかる。</p>
+        <div class="callout callout-info">
+          <p><strong>📌 関連記事：</strong><a href="chatgpt-vs-claude.html">ChatGPT vs Claude｜非エンジニアが両方使って分かった決定的な違い</a>も参考にどうぞ。AIツール選びの参考になるはず。</p>
+        </div>
+        <p class="article-author">この記事を書いた人：<strong>Tokimo</strong>（Webライター／副業ブロガー。Cursorを1ヶ月間本格的に検証し、Claude Codeとの使い分けを確立した非エンジニア）</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">🤖 AI実践ラボ</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../index.html#tools">ツール紹介</a></li>
+          <li><a href="../index.html#howto">使い方</a></li>
+          <li><a href="../index.html#reviews">レビュー</a></li>
+          <li><a href="../index.html#sidejob">副業活用</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2026 AI実践ラボ. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
