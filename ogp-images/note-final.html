@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:670px;overflow:hidden;background:#0f0c29;font-family:'Noto Sans JP',sans-serif}
+
+.card{
+  width:1280px;height:670px;
+  background:linear-gradient(135deg,#0f0c29 0%,#1a1744 30%,#302b63 60%,#24243e 100%);
+  position:relative;overflow:hidden;
+}
+
+/* 装飾グロー */
+.card::before{
+  content:'';position:absolute;width:700px;height:700px;
+  background:radial-gradient(circle,rgba(99,102,241,0.25),transparent 65%);
+  top:-200px;right:-150px;
+}
+.card::after{
+  content:'';position:absolute;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(168,85,247,0.15),transparent 65%);
+  bottom:-100px;left:-100px;
+}
+
+/* コード風の背景装飾 */
+.code-bg{
+  position:absolute;top:0;left:0;right:0;bottom:0;z-index:0;
+  opacity:0.04;font-family:monospace;font-size:14px;color:#fff;
+  padding:20px;line-height:1.8;word-break:break-all;overflow:hidden;
+}
+
+/* メインコンテンツ */
+.content{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:100%;padding:50px 60px;text-align:center;
+}
+
+/* 上部バッジ */
+.top-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,#6366f1,#a855f7);
+  color:#fff;font-size:18px;font-weight:700;
+  padding:8px 24px;border-radius:30px;margin-bottom:20px;
+  box-shadow:0 4px 20px rgba(99,102,241,0.4);letter-spacing:1px;
+}
+.top-badge .icon{font-size:20px}
+
+/* タイトル */
+.title{
+  color:#fff;font-size:46px;font-weight:900;line-height:1.35;
+  margin-bottom:14px;
+  text-shadow:0 2px 30px rgba(99,102,241,0.4);
+}
+.title .hl{
+  background:linear-gradient(135deg,#818cf8,#c084fc);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* サブタイトル */
+.sub{
+  color:rgba(255,255,255,0.65);font-size:20px;font-weight:700;
+  margin-bottom:26px;letter-spacing:0.5px;
+}
+
+/* ステップフロー */
+.flow{
+  display:flex;align-items:center;gap:8px;margin-bottom:26px;
+}
+.step{
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.85);
+  padding:10px 16px;border-radius:10px;
+  font-size:14px;font-weight:700;
+  display:flex;align-items:center;gap:5px;
+}
+.step .num{
+  background:rgba(99,102,241,0.4);
+  width:22px;height:22px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;color:#fff;font-weight:900;
+}
+.arrow{color:rgba(255,255,255,0.25);font-size:18px;font-weight:700}
+
+/* タグ */
+.tags{display:flex;gap:10px;justify-content:center}
+.tag{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  color:rgba(255,255,255,0.7);
+  padding:7px 18px;border-radius:18px;
+  font-size:14px;font-weight:700;
+}
+
+/* コーナーバッジ：サーバー代0円 */
+.zero{
+  position:absolute;top:24px;left:28px;z-index:2;
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+  color:#fff;font-size:17px;font-weight:900;
+  padding:10px 22px;border-radius:8px;
+  transform:rotate(-2deg);
+  box-shadow:0 4px 20px rgba(239,68,68,0.5);
+  letter-spacing:1px;
+}
+
+/* 著者 */
+.author{
+  position:absolute;bottom:20px;right:32px;z-index:2;
+  color:rgba(255,255,255,0.35);font-size:16px;font-weight:700;
+}
+
+/* コスト表示 */
+.cost{
+  position:absolute;top:24px;right:28px;z-index:2;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  color:rgba(255,255,255,0.5);font-size:14px;font-weight:700;
+  padding:8px 16px;border-radius:8px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="code-bg">git init && git remote add origin https://github.com/tokimo2026/i-tools-site.git && git push origin main // Claude Code: "全HTMLにGA4タグを追加して。sitemap.xml、robots.txt、構造化データも全部作って" // npm install -g @anthropic-ai/claude-code // const ga4 = 'G-V4YWW8GMPB'; gtag('config', ga4); // deploy: netlify --prod // { "@type": "Article", "author": "Tokimo" } // git commit -m "Add GA4 tracking to all pages" // python3 -m http.server 8765</div>
+  
+  <div class="zero">💰 サーバー代 0円</div>
+  <div class="cost">月額コスト：3,000円のみ</div>
+  
+  <div class="content">
+    <div class="top-badge"><span class="icon">📋</span> 全手順＋実際のプロンプト公開</div>
+    
+    <h1 class="title">
+      非エンジニアが<span class="hl">Claude Code</span>で<br>
+      アフィリエイトサイトを構築した全記録
+    </h1>
+    
+    <p class="sub">コードは1行も書いていない。日本語で指示しただけ。</p>
+    
+    <div class="flow">
+      <div class="step"><span class="num">1</span>サイト構築</div>
+      <span class="arrow">→</span>
+      <div class="step"><span class="num">2</span>GitHub + Netlify</div>
+      <span class="arrow">→</span>
+      <div class="step"><span class="num">3</span>GA4 + Search Console</div>
+      <span class="arrow">→</span>
+      <div class="step"><span class="num">4</span>記事量産</div>
+      <span class="arrow">→</span>
+      <div class="step"><span class="num">5</span>収益化</div>
+    </div>
+    
+    <div class="tags">
+      <span class="tag">#ClaudeCode</span>
+      <span class="tag">#非エンジニア</span>
+      <span class="tag">#AI副業</span>
+      <span class="tag">#サーバー代0円</span>
+    </div>
+  </div>
+  
+  <div class="author">AI実践ラボ｜Tokimo</div>
+</div>
+</body>
+</html>

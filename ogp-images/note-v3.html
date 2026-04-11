@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+html,body,.wrap{margin:0;padding:0;width:1280px;height:670px;overflow:hidden;background:#0a0a1a}
+*{box-sizing:border-box;font-family:'Noto Sans JP',sans-serif}
+
+.wrap{
+  position:relative;
+  background:
+    radial-gradient(ellipse 80% 60% at 75% 20%, rgba(99,102,241,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(139,92,246,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+    linear-gradient(160deg, #080818 0%, #0e0e2a 25%, #151540 50%, #0d0d25 75%, #080818 100%);
+}
+
+/* グリッドパターン */
+.grid{
+  position:absolute;inset:0;z-index:0;
+  background-image:
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+/* フローティングアイコン装飾 */
+.float{position:absolute;z-index:0;opacity:0.06;font-size:48px}
+.f1{top:40px;right:80px;transform:rotate(15deg)}
+.f2{bottom:50px;left:60px;transform:rotate(-10deg)}
+.f3{top:120px;left:120px;transform:rotate(8deg)}
+.f4{bottom:120px;right:140px;transform:rotate(-15deg)}
+.f5{top:50%;left:40px;transform:translateY(-50%) rotate(5deg)}
+.f6{top:30%;right:50px;transform:rotate(-8deg)}
+
+/* メインレイアウト */
+.main{
+  position:relative;z-index:1;
+  display:flex;height:100%;
+}
+
+/* 左カラム：ビジュアル */
+.left{
+  width:380px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:40px;
+  border-right:1px solid rgba(99,102,241,0.1);
+}
+
+.cost-circle{
+  width:180px;height:180px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(139,92,246,0.1));
+  border:2px solid rgba(99,102,241,0.3);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin-bottom:24px;
+}
+.cost-label{color:rgba(255,255,255,0.5);font-size:14px;font-weight:700;margin-bottom:4px}
+.cost-num{color:#818cf8;font-size:56px;font-weight:900;line-height:1}
+.cost-unit{color:rgba(255,255,255,0.5);font-size:18px;font-weight:700;margin-top:2px}
+
+.tool-list{display:flex;flex-direction:column;gap:8px;width:100%}
+.tool{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  padding:10px 16px;border-radius:8px;
+  color:rgba(255,255,255,0.6);font-size:13px;font-weight:700;
+}
+.tool .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0}
+
+/* 右カラム：テキスト */
+.right{
+  flex:1;display:flex;flex-direction:column;justify-content:center;
+  padding:50px 60px 50px 50px;
+}
+
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;font-size:15px;font-weight:700;
+  padding:6px 18px;border-radius:20px;margin-bottom:18px;
+  box-shadow:0 2px 12px rgba(99,102,241,0.3);
+  width:fit-content;
+}
+
+.title{
+  color:#fff;font-size:40px;font-weight:900;line-height:1.35;margin-bottom:14px;
+}
+.title em{
+  font-style:normal;
+  background:linear-gradient(135deg,#818cf8,#c084fc);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+.desc{
+  color:rgba(255,255,255,0.55);font-size:17px;font-weight:500;
+  line-height:1.7;margin-bottom:24px;
+}
+
+.steps{display:flex;gap:6px;align-items:center;margin-bottom:22px}
+.stp{
+  background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.2);
+  color:rgba(255,255,255,0.8);padding:7px 14px;border-radius:8px;
+  font-size:12px;font-weight:700;white-space:nowrap;
+}
+.stp-a{color:rgba(99,102,241,0.4);font-size:14px}
+
+.tags{display:flex;gap:8px}
+.tag{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.5);padding:6px 14px;border-radius:14px;
+  font-size:12px;font-weight:700;
+}
+
+.author{
+  position:absolute;bottom:18px;right:28px;z-index:2;
+  color:rgba(255,255,255,0.2);font-size:14px;font-weight:700;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid"></div>
+  <div class="float f1">⚡</div>
+  <div class="float f2">🚀</div>
+  <div class="float f3">&lt;/&gt;</div>
+  <div class="float f4">📊</div>
+  <div class="float f5">🔧</div>
+  <div class="float f6">💡</div>
+
+  <div class="main">
+    <div class="left">
+      <div class="cost-circle">
+        <span class="cost-label">サーバー代</span>
+        <span class="cost-num">0</span>
+        <span class="cost-unit">円</span>
+      </div>
+      <div class="tool-list">
+        <div class="tool"><span class="dot"></span>Claude Code（指示出し）</div>
+        <div class="tool"><span class="dot"></span>GitHub（コード管理）</div>
+        <div class="tool"><span class="dot"></span>Netlify（無料ホスティング）</div>
+        <div class="tool"><span class="dot"></span>GA4 + Search Console</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="badge">📋 全手順 + プロンプト公開</div>
+      <h1 class="title">非エンジニアが<em>Claude Code</em>で<br>アフィリエイトサイトを<br>構築した全記録</h1>
+      <p class="desc">コード経験ゼロ。HTMLも読めない。<br>それでもAIに日本語で指示するだけで、サイトが完成した。</p>
+      <div class="steps">
+        <span class="stp">STEP1 構築</span><span class="stp-a">→</span>
+        <span class="stp">STEP2 デプロイ</span><span class="stp-a">→</span>
+        <span class="stp">STEP3 SEO</span><span class="stp-a">→</span>
+        <span class="stp">STEP4 量産</span><span class="stp-a">→</span>
+        <span class="stp">STEP5 収益化</span>
+      </div>
+      <div class="tags">
+        <span class="tag">#ClaudeCode</span>
+        <span class="tag">#非エンジニア</span>
+        <span class="tag">#AI副業</span>
+        <span class="tag">#アフィリエイト</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="author">AI実践ラボ｜Tokimo</div>
+</div>
+</body>
+</html>

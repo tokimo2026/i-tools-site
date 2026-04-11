@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;color:#fff;font-family:'Noto Sans JP',sans-serif;padding:20px}
+h1{text-align:center;margin:20px 0;font-size:24px}
+.download-all{display:block;margin:20px auto;padding:16px 40px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;border:none;border-radius:12px;font-size:20px;font-weight:700;cursor:pointer}
+.download-all:hover{transform:scale(1.05)}
+.card-wrapper{margin:30px auto;text-align:center}
+.card-wrapper button{margin-top:8px;padding:8px 24px;background:#333;color:#fff;border:1px solid #555;border-radius:8px;cursor:pointer;font-size:14px}
+.card{width:1280px;height:670px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin:0 auto}
+.card *{font-family:'Noto Sans JP',sans-serif}
+.content{position:relative;z-index:1;text-align:center;padding:40px;max-width:1100px}
+.badge{display:inline-block;color:#fff;font-size:20px;font-weight:700;padding:8px 28px;border-radius:30px;margin-bottom:20px;letter-spacing:2px}
+.title{color:#fff;font-size:50px;font-weight:900;line-height:1.4;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,0.5)}
+.subtitle{color:rgba(255,255,255,0.7);font-size:22px;font-weight:700;margin-bottom:28px}
+.tags{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.tag{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:8px 20px;border-radius:20px;font-size:16px;font-weight:700}
+.author{position:absolute;bottom:24px;right:36px;color:rgba(255,255,255,0.4);font-size:18px;font-weight:700;z-index:1}
+.corner{position:absolute;top:28px;left:36px;color:#fff;font-size:18px;font-weight:900;padding:10px 22px;border-radius:8px;transform:rotate(-3deg);z-index:1;box-shadow:0 4px 15px rgba(0,0,0,0.4)}
+.glow1{position:absolute;width:500px;height:500px;border-radius:50%;top:-100px;right:-100px;z-index:0}
+.glow2{position:absolute;width:350px;height:350px;border-radius:50%;bottom:-80px;left:-80px;z-index:0}
+.progress{display:none;text-align:center;margin:20px;font-size:18px;color:#a855f7}
+</style>
+</head>
+<body>
+<h1>AI実践ラボ アイキャッチ画像ジェネレーター（全10枚）</h1>
+<button class="download-all" onclick="downloadAll()">📥 全10枚を一括ダウンロード</button>
+<div class="progress" id="progress">ダウンロード中... <span id="count">0</span>/10</div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="claude-code-review.png" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(99,102,241,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(168,85,247,0.2),transparent 70%)"></div>
+<div class="corner" style="background:#f59e0b">★★★★★ 5.0</div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#6366f1,#a855f7)">徹底レビュー</div><h2 class="title">Claude Code 徹底レビュー<br>非エンジニアが1ヶ月使った正直な感想</h2><p class="subtitle">メリット・デメリット・料金・始め方まで完全解説</p><div class="tags"><span class="tag">#ClaudeCode</span><span class="tag">#レビュー</span><span class="tag">#非エンジニア</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="mcp-beginners.png" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(15,52,96,0.4),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(22,33,62,0.3),transparent 70%)"></div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">入門ガイド</div><h2 class="title">MCP入門ガイド<br>非エンジニアでもわかる基本と実践</h2><p class="subtitle">Model Context Protocolを初心者目線で徹底解説</p><div class="tags"><span class="tag">#MCP</span><span class="tag">#入門</span><span class="tag">#AI活用</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="cowork-review.png" style="background:linear-gradient(135deg,#0d1b2a,#1b2838,#2d4059)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(45,64,89,0.4),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(27,40,56,0.3),transparent 70%)"></div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">総合レビュー</div><h2 class="title">Claude Cowork 総合レビュー<br>チームでAIを使う新しい形</h2><p class="subtitle">機能・使い方・Claude Codeとの違いを実体験ベースで解説</p><div class="tags"><span class="tag">#Cowork</span><span class="tag">#レビュー</span><span class="tag">#チームAI</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="ai-automation-basics.png" style="background:linear-gradient(135deg,#1a002e,#3d0066,#7b2d8e)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(123,45,142,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(61,0,102,0.3),transparent 70%)"></div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#d946ef,#a855f7)">基礎講座</div><h2 class="title">非エンジニアのためのAI自動化入門<br>日常業務を効率化する方法</h2><p class="subtitle">ChatGPT・Claude・Zapierで業務時間を半分にした実体験</p><div class="tags"><span class="tag">#AI自動化</span><span class="tag">#業務効率化</span><span class="tag">#初心者向け</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="ai-sidejob-guide.png" style="background:linear-gradient(135deg,#0a1628,#1c3a5e,#2e6b8a)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(46,107,138,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(28,58,94,0.3),transparent 70%)"></div>
+<div class="corner" style="background:#22c55e">月3万円</div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#0ea5e9,#0284c7)">副業ガイド</div><h2 class="title">AI副業スタートガイド<br>月3万円を目指すロードマップ</h2><p class="subtitle">スキルゼロから始められるAI副業の全ステップ</p><div class="tags"><span class="tag">#AI副業</span><span class="tag">#月3万円</span><span class="tag">#ロードマップ</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="ai-blog-monetize.png" style="background:linear-gradient(135deg,#1a0000,#4a0e0e,#8b1a1a)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(139,26,26,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(74,14,14,0.3),transparent 70%)"></div>
+<div class="corner" style="background:#ef4444">完全ガイド</div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#ef4444,#dc2626)">収益化ガイド</div><h2 class="title">AI×ブログで月3万円稼ぐ<br>完全ガイド</h2><p class="subtitle">サーバー選びから記事量産まで全手順を公開</p><div class="tags"><span class="tag">#AIブログ</span><span class="tag">#収益化</span><span class="tag">#アフィリエイト</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="ai-skill-selling.png" style="background:linear-gradient(135deg,#0a1a0a,#1a3a1a,#2d5a2d)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(45,90,45,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(26,58,26,0.3),transparent 70%)"></div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#22c55e,#16a34a)">実践記録</div><h2 class="title">AIスキルをココナラで売る方法<br>月2万円を稼いだ実践記録</h2><p class="subtitle">未経験からAIスキルを商品化するまでの全過程</p><div class="tags"><span class="tag">#ココナラ</span><span class="tag">#AIスキル</span><span class="tag">#副業</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="chatgpt-vs-claude.png" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(249,115,22,0.2),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(234,88,12,0.15),transparent 70%)"></div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#f97316,#ea580c)">徹底比較</div><h2 class="title">ChatGPT <span style="color:#f97316;font-size:64px">VS</span> Claude<br>非エンジニアが両方使って分かった決定的な違い</h2><p class="subtitle">文章力・コード生成・料金・使いやすさを実体験ベースで比較</p><div class="tags"><span class="tag">#ChatGPT</span><span class="tag">#Claude</span><span class="tag">#比較</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="ai-tools-ranking.png" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69,#4a2c8a)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(74,44,138,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(45,27,105,0.3),transparent 70%)"></div>
+<div class="corner" style="background:linear-gradient(135deg,#f59e0b,#d97706)">TOP 5</div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#f59e0b,#d97706)">2026年最新</div><h2 class="title">非エンジニアにおすすめの<br>AIツール5選</h2><p class="subtitle">副業で本当に使えるツールだけを厳選ランキング</p><div class="tags"><span class="tag">#AIツール</span><span class="tag">#ランキング</span><span class="tag">#副業</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<div class="card-wrapper">
+<div class="card" data-filename="cursor-review.png" style="background:linear-gradient(135deg,#0c1220,#1a2744,#283d6b)">
+<div class="glow1" style="background:radial-gradient(circle,rgba(40,61,107,0.3),transparent 70%)"></div>
+<div class="glow2" style="background:radial-gradient(circle,rgba(26,39,68,0.3),transparent 70%)"></div>
+<div class="corner" style="background:#f59e0b">★★★★☆ 4.0</div>
+<div class="content"><div class="badge" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">レビュー</div><h2 class="title">Cursor 徹底レビュー<br>非エンジニアがClaude Codeと使い分けてみた結果</h2><p class="subtitle">AI搭載コードエディタの実力と最適な使い分け方</p><div class="tags"><span class="tag">#Cursor</span><span class="tag">#レビュー</span><span class="tag">#ClaudeCode</span></div></div>
+<div class="author">AI実践ラボ｜Tokimo</div>
+</div><button onclick="downloadOne(this)">📥 ダウンロード</button></div>
+
+<script>
+async function downloadOne(btn){
+  const card=btn.previousElementSibling;
+  const filename=card.dataset.filename;
+  const canvas=await html2canvas(card,{width:1280,height:670,scale:1,useCORS:true});
+  const link=document.createElement('a');
+  link.download=filename;
+  link.href=canvas.toDataURL('image/png');
+  link.click();
+}
+async function downloadAll(){
+  const cards=document.querySelectorAll('.card');
+  const prog=document.getElementById('progress');
+  const count=document.getElementById('count');
+  prog.style.display='block';
+  for(let i=0;i<cards.length;i++){
+    count.textContent=i+1;
+    const card=cards[i];
+    const canvas=await html2canvas(card,{width:1280,height:670,scale:1,useCORS:true});
+    const link=document.createElement('a');
+    link.download=card.dataset.filename;
+    link.href=canvas.toDataURL('image/png');
+    link.click();
+    await new Promise(r=>setTimeout(r,500));
+  }
+  prog.textContent='✅ 全10枚ダウンロード完了！';
+}
+</script>
+</body>
+</html>

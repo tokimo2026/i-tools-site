@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;width:1280px;height:670px;overflow:hidden;background:#080818;font-family:'Noto Sans JP',sans-serif}
+
+.wrap{
+  width:1280px;height:670px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 60% 50% at 60% 35%, rgba(14,165,233,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 30% 70%, rgba(99,102,241,0.08) 0%, transparent 50%),
+    linear-gradient(155deg, #070720 0%, #0a0a2a 30%, #0e1035 55%, #080820 100%);
+}
+
+.grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(14,165,233,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,165,233,0.03) 1px, transparent 1px);
+  background-size:50px 50px;
+}
+
+.main{
+  position:relative;z-index:1;display:flex;height:100%;
+}
+
+/* 左カラム：3行フレームワーク */
+.left{
+  width:400px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:40px;
+  border-right:1px solid rgba(14,165,233,0.1);
+}
+
+.framework{display:flex;flex-direction:column;gap:16px;width:100%}
+
+.fw-item{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-left:4px solid;
+  padding:16px 20px;border-radius:0 10px 10px 0;
+}
+.fw-item.purpose{border-left-color:#0ea5e9}
+.fw-item.constraint{border-left-color:#f59e0b}
+.fw-item.output{border-left-color:#22c55e}
+
+.fw-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:24px;height:24px;border-radius:50%;
+  font-size:13px;font-weight:900;color:#fff;margin-right:8px;
+}
+.purpose .fw-num{background:#0ea5e9}
+.constraint .fw-num{background:#f59e0b}
+.output .fw-num{background:#22c55e}
+
+.fw-label{color:rgba(255,255,255,0.85);font-size:16px;font-weight:700}
+.fw-desc{color:rgba(255,255,255,0.4);font-size:13px;font-weight:500;margin-top:6px}
+
+.fw-arrow{
+  text-align:center;color:rgba(255,255,255,0.15);font-size:20px;
+  margin:-4px 0;
+}
+
+/* 右カラム */
+.right{
+  flex:1;display:flex;flex-direction:column;justify-content:center;
+  padding:50px 60px 50px 50px;
+}
+
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:linear-gradient(135deg,#0ea5e9,#0284c7);
+  color:#fff;font-size:15px;font-weight:700;
+  padding:6px 18px;border-radius:20px;margin-bottom:20px;
+  box-shadow:0 2px 12px rgba(14,165,233,0.3);width:fit-content;
+}
+
+.title{
+  color:#fff;font-size:42px;font-weight:900;line-height:1.35;margin-bottom:16px;
+}
+.title em{
+  font-style:normal;
+  background:linear-gradient(135deg,#38bdf8,#7dd3fc);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+.desc{
+  color:rgba(255,255,255,0.5);font-size:18px;font-weight:500;
+  line-height:1.7;margin-bottom:26px;
+}
+
+.tags{display:flex;gap:8px}
+.tag{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.45);padding:6px 14px;border-radius:14px;
+  font-size:12px;font-weight:700;
+}
+
+.corner{
+  position:absolute;top:24px;left:28px;
+  background:linear-gradient(135deg,#0ea5e9,#0284c7);
+  color:#fff;font-size:17px;font-weight:900;
+  padding:10px 22px;border-radius:8px;transform:rotate(-2deg);
+  z-index:2;box-shadow:0 4px 15px rgba(14,165,233,0.4);
+}
+
+.author{
+  position:absolute;bottom:18px;right:28px;z-index:2;
+  color:rgba(255,255,255,0.2);font-size:14px;font-weight:700;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid"></div>
+  <div class="corner">3行で伝わる</div>
+  
+  <div class="main">
+    <div class="left">
+      <div class="framework">
+        <div class="fw-item purpose">
+          <span class="fw-num">1</span>
+          <span class="fw-label">目的（何をしたいか）</span>
+          <div class="fw-desc">例：「ブログ記事の構成を考えて」</div>
+        </div>
+        <div class="fw-arrow">↓</div>
+        <div class="fw-item constraint">
+          <span class="fw-num">2</span>
+          <span class="fw-label">制約（条件・縛り）</span>
+          <div class="fw-desc">例：「初心者向け、800字以内」</div>
+        </div>
+        <div class="fw-arrow">↓</div>
+        <div class="fw-item output">
+          <span class="fw-num">3</span>
+          <span class="fw-label">出力形式（どう返して）</span>
+          <div class="fw-desc">例：「見出し5つと概要を箇条書き」</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="badge">💡 プロンプト設計</div>
+      <h1 class="title">初めての壁打ち：<br>AIに<em>「何を伝えるか」</em>の<br>三行</h1>
+      <p class="desc">長すぎず、短すぎず。<br>たった3行で、AIの回答が劇的に変わるフレームワーク。</p>
+      <div class="tags">
+        <span class="tag">#プロンプト設計</span>
+        <span class="tag">#AI壁打ち</span>
+        <span class="tag">#3行フレームワーク</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="author">TOKIMO｜AI実践メモ</div>
+</div>
+</body>
+</html>
