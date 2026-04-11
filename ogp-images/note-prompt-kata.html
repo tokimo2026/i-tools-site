@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;width:1280px;height:670px;overflow:hidden;background:#080818;font-family:'Noto Sans JP',sans-serif}
+.card{width:1280px;height:670px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse 60% 50% at 60% 35%,rgba(239,68,68,0.08),transparent 55%),
+  radial-gradient(ellipse 50% 40% at 30% 70%,rgba(99,102,241,0.08),transparent 50%),
+  linear-gradient(155deg,#080818,#0e0e2a 30%,#111138 55%,#0a0a22 100%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(99,102,241,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.03) 1px,transparent 1px);background-size:50px 50px}
+.main{position:relative;z-index:1;display:flex;height:100%}
+.left{width:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border-right:1px solid rgba(99,102,241,0.1)}
+.framework{display:flex;flex-direction:column;gap:12px;width:100%}
+.fw-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-left:4px solid;padding:14px 18px;border-radius:0 10px 10px 0}
+.fw-item.bad{border-left-color:#ef4444}
+.fw-item.good{border-left-color:#22c55e}
+.fw-label{font-size:14px;font-weight:700}
+.fw-label.bad-l{color:#ef4444}
+.fw-label.good-l{color:#22c55e}
+.fw-text{color:rgba(255,255,255,0.5);font-size:13px;margin-top:4px}
+.vs{text-align:center;color:rgba(255,255,255,0.2);font-size:24px;font-weight:900;margin:4px 0}
+.right{flex:1;display:flex;flex-direction:column;justify-content:center;padding:50px 60px 50px 50px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;font-size:15px;font-weight:700;padding:6px 18px;border-radius:20px;margin-bottom:20px;box-shadow:0 2px 12px rgba(249,115,22,0.3);width:fit-content}
+.title{color:#fff;font-size:40px;font-weight:900;line-height:1.35;margin-bottom:14px}
+.title em{font-style:normal;background:linear-gradient(135deg,#fb923c,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.desc{color:rgba(255,255,255,0.5);font-size:17px;font-weight:500;line-height:1.7;margin-bottom:24px}
+.tags{display:flex;gap:8px}
+.tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.45);padding:6px 14px;border-radius:14px;font-size:12px;font-weight:700}
+.corner{position:absolute;top:24px;left:28px;background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;font-size:17px;font-weight:900;padding:10px 22px;border-radius:8px;transform:rotate(-2deg);z-index:2;box-shadow:0 4px 15px rgba(249,115,22,0.4)}
+.author{position:absolute;bottom:18px;right:28px;z-index:2;color:rgba(255,255,255,0.2);font-size:14px;font-weight:700}
+</style></head><body>
+<div class="card"><div class="grid"></div>
+<div class="corner">3行で激変</div>
+<div class="main">
+<div class="left">
+<div class="framework">
+<div class="fw-item bad"><span class="fw-label bad-l">❌ ダメな例</span><div class="fw-text">「ブログ記事を書いて」</div></div>
+<div class="vs">↓</div>
+<div class="fw-item good"><span class="fw-label good-l">⭕ 良い例</span><div class="fw-text">目的：AI副業のブログ構成<br>制約：初心者向け、800字<br>出力：見出し5つ+概要</div></div>
+</div>
+</div>
+<div class="right">
+<div class="badge">💡 プロンプト実践術</div>
+<h1 class="title">ChatGPTやClaudeで<br><em>「微妙な回答」</em>が<br>返ってくる人へ</h1>
+<p class="desc">3行で変わるプロンプトの型。<br>テンプレート5選付き。</p>
+<div class="tags"><span class="tag">#プロンプト</span><span class="tag">#ChatGPT</span><span class="tag">#Claude</span></div>
+</div>
+</div>
+<div class="author">TOKIMO｜AI実践メモ</div>
+</div></body></html>
