@@ -1,0 +1,86 @@
+---
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const sortedArticles = articles.sort((a, b) =>
+  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YWW8GMPB"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V4YWW8GMPB');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI実践ラボ｜非エンジニアのためのAIツール活用ガイド</title>
+  <meta name="description" content="Claude Code、Cowork、MCP など最新AIツールの使い方を非エンジニア目線で徹底解説。実体験ベースのレビューと活用ノウハウ。">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-icon">🤖</span>
+          <span class="logo-text">AI実践ラボ</span>
+        </a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#articles">記事一覧</a></li>
+            <li><a href="#sidejob">AI副業</a></li>
+          </ul>
+        </nav>
+        <a href="https://x.com/Tokimo2026" target="_blank" rel="noopener" style="font-size:0.85rem; color:#6366f1; text-decoration:none;">フォロー</a>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding: 4rem 0; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 2rem; margin-bottom: 1rem;">コードが書けなくても、<br><span style="color: #6366f1;">AIは使いこなせる。</span></h1>
+      <p style="color: #666; max-width: 600px; margin: 0 auto 2rem;">Claude Code、Cowork、MCP ── 最新AIツールの使い方を実体験ベースで徹底解説。</p>
+      <p style="font-size: 0.9rem; color: #999;">全{sortedArticles.length}記事 ─ 非エンジニア目線で解説</p>
+    </div>
+  </section>
+
+  <section id="articles" style="padding: 3rem 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">記事一覧</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+        {sortedArticles.map((article) => (
+          <a href={`/articles/${article.id}`} style="display: block; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+            <span style="display: inline-block; font-size: 0.75rem; background: #6366f1; color: white; padding: 2px 8px; border-radius: 4px; margin-bottom: 0.5rem;">{article.data.category}</span>
+            <h3 style="font-size: 1rem; margin: 0.5rem 0; line-height: 1.5;">{article.data.title}</h3>
+            <p style="font-size: 0.85rem; color: #666; margin: 0;">{article.data.description.slice(0, 80)}...</p>
+            <span style="font-size: 0.75rem; color: #999; margin-top: 0.5rem; display: block;">{article.data.date}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="sidejob" style="padding: 3rem 0; text-align: center; background: #f9fafb;">
+    <div class="container">
+      <h2>Xで最新情報を発信中</h2>
+      <p style="color: #666;">Claude Codeの実践ノウハウを毎日投稿しています</p>
+      <a href="https://x.com/Tokimo2026" target="_blank" style="display: inline-block; padding: 12px 24px; background: #6366f1; color: white; border-radius: 8px; text-decoration: none; margin-top: 1rem;">@Tokimo2026 をフォロー</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 AI実践ラボ by Tokimo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
