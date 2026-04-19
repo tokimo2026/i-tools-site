@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="ja"> <head><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script async src="https://www.googletagmanager.com/gtag/js?id=G-V4YWW8GMPB"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V4YWW8GMPB');
+  </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AIプロンプトの書き方完全ガイド｜初心者が今すぐ使える実践テンプレート - AI実践ラボ</title><meta name="description" content="ChatGPTやClaudeへのプロンプトの書き方を初心者向けに徹底解説。3行フレームワークと10個の実践テンプレートで、すぐに使えるプロンプト術を身につけよう。"><link rel="stylesheet" href="/styles/style.css"><link rel="stylesheet" href="/styles/article.css"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIプロンプトの書き方完全ガイド｜初心者が今すぐ使える実践テンプレート","author":{"@type":"Person","name":"Tokimo"},"publisher":{"@type":"Organization","name":"AI実践ラボ"},"datePublished":"2026-04-11"}</script></head> <body> <header class="site-header"> <div class="container"> <div class="header-inner"> <a href="/" class="logo"> <span class="logo-icon">🤖</span> <span class="logo-text">AI実践ラボ</span> </a> <nav class="main-nav"> <ul> <li><a href="/#tools">ツール比較</a></li> <li><a href="/#howto">使い方ガイド</a></li> <li><a href="/#reviews">レビュー</a></li> <li><a href="/#sidejob">AI副業</a></li> </ul> </nav> </div> </div> </header> <main class="article-main"> <div class="container"> <div class="article-layout"> <article class="article-body"> <nav class="breadcrumb"> <a href="/">ホーム</a> &gt;
+<a href="/#tools">AI</a> &gt;
+<span>AIプロンプトの書き方完全ガイド｜初心者が今すぐ使える実践テンプレート</span> </nav> <div class="article-header"> <span class="article-category">AI</span> <span class="article-date">2026-04-11</span> </div> <h1>AIプロンプトの書き方完全ガイド｜初心者が今すぐ使える実践テンプレート</h1>   <h2 id="なぜプロンプトがそんなに重要なのか">なぜプロンプトがそんなに重要なのか</h2>
+<p>AIツールを使い始めて「なんか思ってたより使えないな」と感じたことはないか？それ、ほぼ間違いなくプロンプトのせいだ。</p>
+<p>AIはものすごく高性能なエンジンを積んでいるが、そのエンジンをどう動かすかは完全にこっち次第。同じChatGPTでも、質問の仕方ひとつで出力がぜんぜん違う。俺が実際に試したところ、同じ「ブログ記事を書いて」という依頼でも、プロンプトの組み立て方次第で出力の質が3倍以上変わることがあった。</p>
+<h3 id="aiは優秀な新入社員だと思え">AIは「優秀な新入社員」だと思え</h3>
+<p>AIを上手に使うコツは、「優秀だけど文脈を知らない新入社員」に仕事を頼むイメージを持つことだ。</p>
+<p>例えば新入社員に「資料作っといて」とだけ言っても困るよな。でも「来週の月曜日に役員向けのプレゼンがあるから、Q1の売上データをまとめたA4一枚の資料を作っておいて」と言えば動ける。AIも全く同じで、目的・背景・制約を伝えれば伝えるほど精度が上がる。</p>
+<h3 id="プロンプトで変わる3つのこと">プロンプトで変わる3つのこと</h3>
+<p>プロンプトを改善すると、具体的に以下の3点が劇的に変わる。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        - **精度**：求めていたものにぐっと近い回答が返ってくる</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - **スピード**：修正のやり取りが減り、一発で使えるアウトプットが出る</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - **再現性**：同じプロンプトを使い回せるので、作業を効率化できる</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      </span></span></code></pre>
+<p>逆に言えば、プロンプトを鍛えないと毎回手直しばかりになって「AIって結局使えないじゃん」という結論になってしまう。もったいなさすぎる。</p>
+<h2 id="3行フレームワークで劇的に改善する">3行フレームワークで劇的に改善する</h2>
+<p>難しい理論は後回しでいい。まず「3行フレームワーク」を覚えるだけで、プロンプトの質は一気に上がる。</p>
+<h3 id="3行フレームワークとは">3行フレームワークとは</h3>
+<p>シンプルに言うと、プロンプトを以下の3要素で構成するだけだ。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        - **①役割（ロール）**：AIに何者として振る舞ってほしいか</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - **②タスク**：具体的に何をしてほしいか</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - **③制約**：出力の形式・文字数・トーンなど</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      </span></span></code></pre>
+<h3 id="悪いプロンプトと良いプロンプトの比較">悪いプロンプトと良いプロンプトの比較</h3>
+<p>百聞は一見に如かず。実際に比較してみよう。</p>
+<p>❌ 悪い例</p>
+<p>「ブログ記事を書いて」</p>
+<p>✅ 良い例（3行フレームワーク適用）</p>
+<p>「あなたはSEOに詳しいウェブライターです。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        「初心者向けのChatGPT活用術」というテーマで、30代会社員が読むことを想定したブログ記事の本文を書いてください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        文字数は1500字前後、見出しはh2とh3を使い、専門用語は避けてください。」</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      </span></span></code></pre>
+<p>これだけで出力がガラッと変わる。役割を与えることでAIが「どんな知識ベースで回答すべきか」を判断しやすくなり、制約を加えることで後から手直しする手間が激減する。</p>
+<h3 id="さらに精度を上げるコンテキスト追加テクニック">さらに精度を上げる「コンテキスト追加」テクニック</h3>
+<p>3行フレームワークの応用として、「背景情報」を追加すると精度がさらに上がる。</p>
+<p>例えば「俺は副業でブログをやっている会社員で、読者は副業に興味を持つ20〜30代のサラリーマン」という情報をプロンプトの冒頭に入れると、AIがターゲット読者を意識した文体や内容で回答してくれる。</p>
+<p>面倒に聞こえるかもしれないが、一度テンプレートを作ってしまえばコピペで済む。次のセクションで実際に使えるテンプレートを10個紹介するので、そのまま流用してくれ。</p>
+<h2 id="今すぐ使えるテンプレート10選">今すぐ使えるテンプレート10選</h2>
+<p>以下のテンプレートは全部コピペして使えるように書いてある。カッコ内は自分の状況に合わせて書き換えてくれ。</p>
+<h3 id="-メール文の作成">① メール文の作成</h3>
+<p>あなたはビジネスコミュニケーションの専門家です。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下の状況に合わせた【丁寧なビジネスメール】を作成してください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【送信者】：〇〇会社 営業部の〔自分の名前〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【送信先】：取引先の〔相手の役職・名前〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【目的】：〔例：見積もりの依頼・打ち合わせの日程調整・お礼〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【伝えたい要点】：〔箇条書きで3点以内〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【文体】：敬語、200字以内でコンパクトに</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>これはめちゃくちゃ使える。特にお礼メールや依頼メールを毎回一から書いていた人は、このテンプレートを使うだけで作業時間が半分以下になるはずだ。</p>
+<h3 id="-文章の要約">② 文章の要約</h3>
+<p>以下の文章を要約してください。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          【要約の目的】：〔例：上司への報告用・SNS投稿用・自分の復習用〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【出力形式】：箇条書き3点以内</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【文字数】：全体で150字以内</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【要約する文章】</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          〔ここに文章を貼り付け〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>長い記事や議事録をAIに要約させる使い方は超定番。目的を明記することで、ただ短くするだけでなく「何のために使う要約か」を意識した出力になる。</p>
+<h3 id="-アイデア出し">③ アイデア出し</h3>
+<p>あなたはクリエイティブディレクターです。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下のテーマでアイデアを10個出してください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【テーマ】：〔例：副業ブログのネタ・SNSのキャンペーン企画〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【ターゲット】：〔例：30代の副業志望のサラリーマン〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【条件】：費用をかけずに実行できるもの、既存のアイデアとかぶらないもの</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【出力形式】：番号付きリスト、各アイデアに一言説明を添えること</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>ブレインストーミングの壁打ち相手としてAIを使う方法だ。10個と多めに出させておいて、その中からピックアップする流れが効率的。</p>
+<h3 id="-翻訳言い換え">④ 翻訳・言い換え</h3>
+<p>以下の文章を〔ターゲット言語または文体〕に変換してください。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          【変換の種類】：〔例：日本語→英語 / 専門用語を平易な言葉に / 堅い文体をカジュアルに〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【想定読者】：〔例：英語ネイティブのビジネスパーソン / 中学生〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【注意点】：ニュアンスを変えないように、意訳は最小限に</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【変換する文章】</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          〔ここに文章を貼り付け〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>英語翻訳だけでなく、「難しい文章を中学生でも分かるように」という言い換えにも使える。資料作成やプレゼン原稿の文体調整にも便利だ。</p>
+<h3 id="-sns投稿文">⑤ SNS投稿文</h3>
+<p>あなたはSNSマーケティングの専門家です。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下の条件でX（Twitter）の投稿文を3パターン作成してください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【伝えたい内容】：〔例：新しいAIツールを試したら仕事が劇的に楽になった体験〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【トーン】：〔例：親しみやすい・専門的・ユーモラス〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【ハッシュタグ】：〔例：#AI活用 #副業 を含める〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【文字数】：140字以内（改行込み）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【目標】：いいね・リポストを増やしたい</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>SNS運用者にとって投稿文の作成は地味に時間を取られる作業。3パターン出させておいてA/Bテスト的に試すのが俺のやり方だ。</p>
+<h3 id="-ブログ記事の構成">⑥ ブログ記事の構成</h3>
+<p>あなたはSEOライティングのプロです。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下のテーマでブログ記事の構成（アウトライン）を作成してください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【記事テーマ】：〔例：初心者向けChatGPT活用術〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【ターゲットキーワード】：〔例：ChatGPT 使い方 初心者〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【想定読者】：〔例：AIに興味を持ち始めた30代サラリーマン〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【記事の目的】：〔例：読者にAIツールを使ってみようと思わせる〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【構成要素】：タイトル案3つ、h2見出し5〜7個、各h2の下に含める内容の概要</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>記事を書く前の構成作りにAIを使うと、抜け漏れなく論理的な構成が出来上がる。あとは肉付けするだけなので執筆が格段に楽になる。</p>
+<h3 id="-勉強学習サポート">⑦ 勉強・学習サポート</h3>
+<p>あなたは〔分野〕の専門家かつ優秀な家庭教師です。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          〔学習内容〕について、私が理解できるように教えてください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【私の現在のレベル】：〔例：完全な初心者 / 基礎は分かるが応用が苦手〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【つまずいているポイント】：〔例：〇〇の概念がよく分からない〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【教え方の希望】：具体的な例え話を使って、箇条書きで段階的に説明してください</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【最後に】：理解度を確認するための簡単なクイズを3問出してください</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>AI家庭教師として使う方法だ。クイズを出させることで受け身にならず、能動的に学べる。資格勉強にも効果的だった。</p>
+<h3 id="-コードのデバッグ">⑧ コードのデバッグ</h3>
+<p>あなたは経験豊富なソフトウェアエンジニアです。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下のコードの問題を特定し、修正してください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【使用言語】：〔例：Python / JavaScript〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【やりたいこと】：〔例：CSVファイルを読み込んで合計値を計算する〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【エラー内容】：〔エラーメッセージをそのまま貼り付け〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【コード】：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          〔コードを貼り付け〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          修正後のコードと、なぜそのエラーが起きたかの説明もお願いします。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>プログラミング初心者の強い味方。エラーメッセージをそのまま貼るだけで解決策を出してくれる。「なぜ起きたか」も聞くことで学習にもなる。</p>
+<h3 id="-フィードバック依頼">⑨ フィードバック依頼</h3>
+<p>あなたは〔分野〕のプロフェッショナルです。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下の〔文章 / 企画書 / コード〕にフィードバックをください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【評価してほしい観点】：〔例：読みやすさ・説得力・論理構成〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【フィードバックの形式】：良い点3つ・改善点3つ・総合評価（10点満点）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【遠慮なく厳しく評価してください】</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          〔フィードバックしてもらうコンテンツを貼り付け〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>「遠慮なく」と書くのがポイント。AIはデフォルトで褒め気味になりやすいので、明示的に厳しい評価を求めることでより実用的なフィードバックが返ってくる。</p>
+<h3 id="-計画スケジュール作成">⑩ 計画・スケジュール作成</h3>
+<p>あなたはプロジェクトマネージャーです。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>          以下の目標を達成するための具体的な計画を作成してください。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【目標】：〔例：3ヶ月でTOEIC600点から750点にスコアアップする〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【現在の状況】：〔例：毎日1時間勉強できる、単語力はある程度あるがリスニングが苦手〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【制約】：〔例：仕事が忙しい週末は勉強時間が取れない〕</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          【出力形式】：月別のマイルストーン、週ごとのタスク、おすすめの教材・リソース</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        </span></span></code></pre>
+<p>目標達成のロードマップをAIに作ってもらう方法だ。ダイエット・資格勉強・副業など何にでも応用できる。自分の状況をしっかり伝えるのがポイント。</p>
+<h2 id="やりがちな失敗パターン5選">やりがちな失敗パターン5選</h2>
+<p>テンプレートを紹介したところで、逆にやってはいけないパターンも押さえておこう。これを知っておくだけでかなりの無駄を省ける。</p>
+<h3 id="失敗曖昧すぎる指示">失敗①：曖昧すぎる指示</h3>
+<p>「良い感じにして」「うまくやって」「いい感じのを書いて」──これは全部NG。AIは「良い感じ」の基準を持っていない。具体的に何がどう良ければいいのかを言葉で伝える必要がある。</p>
+<p><strong>改善策</strong>：「〇〇なスタイルで、〇〇字以内で、〇〇を含めて」と数値や具体的条件で指示する。</p>
+<h3 id="失敗一度に詰め込みすぎる">失敗②：一度に詰め込みすぎる</h3>
+<p>「ブログ記事を書いて。あとSNS投稿文も。あとタイトルも10個出して。あと英語版も作って」──これも失敗パターン。タスクを詰め込みすぎると、どれも中途半端な出力になる。</p>
+<p><strong>改善策</strong>：一回のプロンプトでは一つのタスクに絞る。複数の作業は会話を分けて依頼する。</p>
+<h3 id="失敗最初の回答で諦める">失敗③：最初の回答で諦める</h3>
+<p>最初の出力がイマイチでも、そこで「やっぱりAIはダメだ」と諦めてはいけない。AIとの会話は対話で、追加の指示を出すことで洗練されていく。</p>
+<p><strong>改善策</strong>：「〇〇の部分をもっと具体的に」「もう少しカジュアルな文体で」「箇条書きではなく段落形式で」など、フィードバックを与えながら改善していく。</p>
+<h3 id="失敗出力をそのまま使う">失敗④：出力をそのまま使う</h3>
+<p>AIの出力を一切確認せずにそのまま使うのは危険だ。特に数値・日付・固有名詞などはAIが間違えることがある。「ハルシネーション（幻覚）」と呼ばれるこの現象は、いまのAIには避けられない。</p>
+<p><strong>改善策</strong>：AIの出力は「下書き」として扱い、必ず最終確認をする習慣をつける。ファクトチェックが必要なものは自分で確認する。</p>
+<h3 id="失敗毎回プロンプトを一から書く">失敗⑤：毎回プロンプトを一から書く</h3>
+<p>使えるプロンプトが見つかったのに、毎回一から書き直すのは時間の無駄だ。良いプロンプトは資産として保存しておくべき。</p>
+<p><strong>改善策</strong>：Notionやメモアプリにプロンプト集を作る。よく使うものはスニペットツールに登録しておくと更に効率的。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>AIプロンプトの書き方について、基礎から実践テンプレートまで一通り解説した。最後に要点をまとめておく。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        - AIは「優秀だが文脈を知らない新入社員」。目的・背景・制約を伝えるほど精度が上がる</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - 3行フレームワーク（役割 → タスク → 制約）を使うだけで出力が劇的に改善する</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - テンプレートを10個紹介した。コピペして使い回してくれ</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - 最初の回答で諦めず、対話を重ねることで精度を高めよう</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - AIの出力は必ずファクトチェック。数値・固有名詞は要注意</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        - 使えるプロンプトはメモして資産化する</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      </span></span></code></pre>
+<p>プロンプトは練習すればするほど上手くなる。まずは今日、一つのテンプレートを試してみてくれ。「こんなに便利だったのか」という体験が積み重なれば、仕事や日常での活用が一気に広がるはずだ。</p>
+<p>他のAIツールの使い方や副業への活用法は、このサイトの他の記事でも詳しく解説しているので、興味があればあわせてチェックしてくれ。</p>  <div class="affiliate-box"> <a href="https://claude.ai/" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+Claude 公式サイトで始める →
+</a> </div> <div class="callout"> <div class="callout-icon">🖥️</div> <div class="callout-content"> <strong>サイト公開にはレンタルサーバーが必要</strong><br>
+Claude Codeで作ったサイトを公開するなら、高速・安定のレンタルサーバーがおすすめ。ConoHa WINGなら月額660円〜、独自ドメイン永久無料。<br> <a href="https://px.a8.net/svt/ejp?a8mat=4B1HTI+941VVE+50+5SIFHE" rel="nofollow" target="_blank">ConoHa WING 公式サイトはこちら →</a> <img src="https://www17.a8.net/0.gif?a8mat=4B1HTI+941VVE+50+5SIFHE" alt="" width="1" height="1" style="border:none;"> </div> </div> <div class="callout"> <div class="callout-icon">📚</div> <div class="callout-content"> <strong>AI・プログラミング関連の書籍・機材を探すなら</strong><br> <a href="https://rpx.a8.net/svt/ejp?a8mat=3TNNXL+5E3CRE+2HOM+6C1VM&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa23121174074_3TNNXL_5E3CRE_2HOM_6C1VM%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank">楽天で AI関連アイテムを探す →</a> <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=3TNNXL+5E3CRE+2HOM+6C1VM" alt="" style="border:none;"> </div> </div> <div class="callout"> <div class="callout-icon">🎓</div> <div class="callout-content"> <strong>プログラミングの基礎も学びたい方へ</strong><br> <a href="https://px.a8.net/svt/ejp?a8mat=4B1HTI+95U6OQ+4K3S+5YJRM" rel="nofollow" target="_blank">SkillHacks(スキルハックス) を見る →</a> <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B1HTI+95U6OQ+4K3S+5YJRM" alt="" style="border:none;"> </div> </div> </article> <aside class="sidebar"> <div class="sidebar-widget author-widget"> <h3>この記事を書いた人</h3> <div class="author-info"> <div class="author-name">Tokimo</div> <p class="author-desc">非エンジニアのClaude Code実践者。プログラミング経験ゼロからAIツールを使いこなし、業務自動化を実現。</p> <a href="https://x.com/Tokimo2026" class="author-link" target="_blank">@Tokimo2026</a> </div> </div> <div class="sidebar-widget cta-widget"> <h3>Xで最新情報を発信中</h3> <p>Claude Codeの実践ノウハウを毎日投稿</p> <a href="https://x.com/Tokimo2026" class="btn btn-primary" target="_blank">フォローする</a> </div> </aside> </div> </div> </main> <footer class="site-footer"> <div class="container"> <div class="footer-bottom"> <p>&copy; 2026 AI実践ラボ by Tokimo. All rights reserved.</p> </div> </div> </footer> </body></html>
